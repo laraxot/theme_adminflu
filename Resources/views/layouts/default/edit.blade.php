@@ -1,0 +1,18 @@
+@php
+    //dddx(get_defined_vars());
+    $last_container=last($containers);
+@endphp
+
+@extends('adm_theme::layouts.app')
+
+@section('content')
+    {{--
+    @component('adm_theme::layouts.components.list',get_defined_vars())
+    --}}
+    @component('theme::components.crud',get_defined_vars())
+        @slot('content')
+            @livewire('formx::edit',['model'=>$_panel->row])
+        @endslot
+    @endcomponent
+@endsection
+
