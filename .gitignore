@@ -1,2 +1,13 @@
+<<<<<<< HEAD
 *.lock
 *.phar
+=======
+.git-rewrite
+*.lock
+*.phar
+*.log
+node_modules
+package-lock.json
+
+
+>>>>>>> c2a97ff (first)
