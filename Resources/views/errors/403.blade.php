@@ -1,4 +1,4 @@
-@extends('errors::minimal')
+@extends('adm_theme::errors.minimal')
 
 @section('title', __('Forbidden'))
 @section('code', '403')
