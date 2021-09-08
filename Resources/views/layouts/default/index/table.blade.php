@@ -1,35 +1,34 @@
 @php
-    //dddx(get_defined_vars());
-    $fields=$_panel->indexFields();
-    //dddx($fields);
-
+//dddx(get_defined_vars());
+$fields = $_panel->getFields(['act' => 'index']);
+//dddx($fields);
 @endphp
 
 <div id="dataTableBuilder_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-	<div id="" class="row">
+    <div id="" class="row">
 
 
 
-		<div id="" class="col-lg-4 col-xs-12">
-			<div class="dataTables_length" id="dataTableBuilder_length">
-				<label>
-					Show
-					<select name="dataTableBuilder_length" aria-controls="dataTableBuilder" class="form-control form-control-sm">
-						<option value="10">10</option>
-						<option value="25">25</option>
-						<option value="50">50</option>
-						<option value="100">100</option>
-					</select>
-					entries
-				</label>
-			</div>
-		</div>
+        <div id="" class="col-lg-4 col-xs-12">
+            <div class="dataTables_length" id="dataTableBuilder_length">
+                <label>
+                    Show
+                    <select name="dataTableBuilder_length" aria-controls="dataTableBuilder"
+                        class="form-control form-control-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    entries
+                </label>
+            </div>
+        </div>
 
 
 
-		<div id="" class="ml-auto">
-			{{--
-				<div id="dataTableBuilder_filter" class="dataTables_filter">
+        <div id="" class="ml-auto">
+            {{-- <div id="dataTableBuilder_filter" class="dataTables_filter">
 					<div class="input-group input-group-sm">
 						<input type="text" value="" class="form-control" placeholder="Search" aria-label="Search">
 						<div class="input-group-append">
@@ -39,43 +38,45 @@
 							</span>
 						</div>
 					</div>
-				</div>
-			--}}
-			<form method="get">
-				<div class="input-group input-group-sm">
-					<input type="search" name="q" id="form_search" value="{{ Request::input('q') }}" class="form-control" placeholder="Search" aria-label="Search">
+				</div> --}}
+            <form method="get">
+                <div class="input-group input-group-sm">
+                    <input type="search" name="q" id="form_search" value="{{ Request::input('q') }}"
+                        class="form-control" placeholder="Search" aria-label="Search">
 
-					@php
-						$sort_by = head(Request::input('sort',[]));
-						//dddx($sort_by);
-					@endphp
-					<select name="sort[by]" id="form_sort" data-style="btn-selectpicker" title="" class="form-control selectpicker" onchange="this.form.submit()">
-						<option value="">Sort By</option>
-						@foreach($_panel->orderBy() as $sort)
-							<option value="{{ $sort }}" {{ ($sort_by == $sort) ? 'selected' : '' }}>@lang('theme::txt.sort.'.$sort)</option>
-						@endforeach
-					</select>
+                    @php
+                        $sort_by = head(Request::input('sort', []));
+                        //dddx($sort_by);
+                    @endphp
+                    <select name="sort[by]" id="form_sort" data-style="btn-selectpicker" title=""
+                        class="form-control selectpicker" onchange="this.form.submit()">
+                        <option value="">Sort By</option>
+                        @foreach ($_panel->orderBy() as $sort)
+                            <option value="{{ $sort }}" {{ $sort_by == $sort ? 'selected' : '' }}>
+                                @lang('theme::txt.sort.'.$sort)</option>
+                        @endforeach
+                    </select>
 
 
-					<div class="input-group-append">
-						<button type="submit" class="input-group-text">
-							<i class="fa fa-search">
-							</i>
-						</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-	<div id="dataTableBuilder_processing" class="dataTables_processing card" style="display: none;">Processing...</div>
-	<table class="table dataTable no-footer dtr-inline" id="dataTableBuilder" width="100%" role="grid" aria-describedby="dataTableBuilder_info" style="width: 100%;">
-		<thead>
-			<tr role="row">
-                @foreach($fields as $field)
-                    <td>{{ str_replace('_',' ',$field->name) }}</td>
+                    <div class="input-group-append">
+                        <button type="submit" class="input-group-text">
+                            <i class="fa fa-search">
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="dataTableBuilder_processing" class="dataTables_processing card" style="display: none;">Processing...</div>
+    <table class="table dataTable no-footer dtr-inline" id="dataTableBuilder" width="100%" role="grid"
+        aria-describedby="dataTableBuilder_info" style="width: 100%;">
+        <thead>
+            <tr role="row">
+                @foreach ($fields as $field)
+                    <td>{{ str_replace('_', ' ', $field->name) }}</td>
                 @endforeach
-                {{--
-                    <th title="Image" class="sorting_desc" rowspan="1" colspan="1" style="width: 53px;" aria-label="Image" data-column-index="0">Image</th>
+                {{-- <th title="Image" class="sorting_desc" rowspan="1" colspan="1" style="width: 53px;" aria-label="Image" data-column-index="0">Image</th>
                     <th title="Name" class="sorting" tabindex="0" aria-controls="dataTableBuilder" rowspan="1" colspan="1" style="width: 130px;" aria-label="Name: activate to sort column ascending" data-column-index="1">Name</th>
                     <th title="Address" class="sorting" tabindex="0" aria-controls="dataTableBuilder" rowspan="1" colspan="1" style="width: 221px;" aria-label="Address: activate to sort column ascending" data-column-index="2">Address</th>
                     <th title="Phone" class="sorting" tabindex="0" aria-controls="dataTableBuilder" rowspan="1" colspan="1" style="width: 65px;" aria-label="Phone: activate to sort column ascending" data-column-index="3">Phone</th>
@@ -83,43 +84,45 @@
                     <th title="Available for delivery" class="sorting" tabindex="0" aria-controls="dataTableBuilder" rowspan="1" colspan="1" style="width: 77px;" aria-label="Available for delivery: activate to sort column ascending" data-column-index="5">Available for delivery</th>
                     <th title="Closed restaurant" class="sorting" tabindex="0" aria-controls="dataTableBuilder" rowspan="1" colspan="1" style="width: 87px;" aria-label="Closed restaurant: activate to sort column ascending" data-column-index="6">Closed restaurant</th>
                     <th title="Updated At" class="sorting" tabindex="0" aria-controls="dataTableBuilder" rowspan="1" colspan="1" style="width: 71px;" aria-label="Updated At: activate to sort column ascending" data-column-index="7">Updated At</th>
-                    <th title="Action" width="80px" class="sorting_disabled" rowspan="1" colspan="1" style="width: 80px;" aria-label="Action" data-column-index="8">Action</th>
-                    --}}
-			</tr>
-		</thead>
-		<tbody>
+                    <th title="Action" width="80px" class="sorting_disabled" rowspan="1" colspan="1" style="width: 80px;" aria-label="Action" data-column-index="8">Action</th> --}}
+            </tr>
+        </thead>
+        <tbody>
 
 
 
-			@foreach($rows as $row)
-				@php
-					$row_panel=Panel::get($row);
-				@endphp
+            @foreach ($rows as $row)
+                @php
+                    $row_panel = Panel::get($row);
+                @endphp
 
-				<tr role="row" class="odd">
-					@foreach($fields as $field)
-						<td>{!! Theme::inputFreeze(['row'=>$row,'field'=>$field]) !!}</td>
-					@endforeach
-					<td>
-						<div class="btn-group btn-group-sm">
-							<a data-toggle="tooltip" data-placement="bottom" title="" href="{{ $row_panel->url(['act'=>'edit']) }}" class="btn btn-link" data-original-title="Edit Restaurant">
-								<i class="fa fa-edit"></i>
-							</a>
-							<form method="POST" action="{{ $row_panel->url(['act'=>'destroy']) }}" accept-charset="UTF-8">
-								<input name="_method" type="hidden" value="DELETE">
-								<input name="_token" type="hidden" value="A9tDcRcCyUhR346Nvgf8zxATCmHBP3baQXocLVKg">
-								<button type="submit" class="btn btn-link text-danger" onclick="return confirm('Are you sure?')">
-									<i class="fa fa-trash">
-									</i>
-								</button>
-							</form>
-						</div>
-					</td>
-				</tr>
+                <tr role="row" class="odd">
+                    @foreach ($fields as $field)
+                        <td>{!! Theme::inputFreeze(['row' => $row, 'field' => $field]) !!}</td>
+                    @endforeach
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a data-toggle="tooltip" data-placement="bottom" title=""
+                                href="{{ $row_panel->url(['act' => 'edit']) }}" class="btn btn-link"
+                                data-original-title="Edit Restaurant">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                            <form method="POST" action="{{ $row_panel->url(['act' => 'destroy']) }}"
+                                accept-charset="UTF-8">
+                                <input name="_method" type="hidden" value="DELETE">
+                                <input name="_token" type="hidden" value="A9tDcRcCyUhR346Nvgf8zxATCmHBP3baQXocLVKg">
+                                <button type="submit" class="btn btn-link text-danger"
+                                    onclick="return confirm('Are you sure?')">
+                                    <i class="fa fa-trash">
+                                    </i>
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
             @endforeach
 
-            {{--
-			<tr role="row" class="even">
+            {{-- <tr role="row" class="even">
 				<td class="sorting_1" tabindex="0"><img class=" rounded " style="width:50px" src="http://localhost/food_tribu_project/food_flutter_laravel/public/images/image_default.png" alt="image_default"></td>
 				<td>Restaurant Altenwerth, Murphy and Wolf</td>
 				<td>7360 Langosh Meadows Suite 419
@@ -334,22 +337,24 @@
 						</form>
 					</div>
 				</td>
-            </tr>
-             --}}
-		</tbody>
-	</table>
-	<div class="dataTables_info" id="dataTableBuilder_info" role="status" aria-live="polite">Showing 1 to 10 of 10 entries</div>
-	<div class="dataTables_paginate paging_simple_numbers" id="dataTableBuilder_paginate">
-		<ul class="pagination">
-			<li class="paginate_button page-item previous disabled" id="dataTableBuilder_previous">
-				<a href="#" aria-controls="dataTableBuilder" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
-			</li>
-			<li class="paginate_button page-item active">
-				<a href="#" aria-controls="dataTableBuilder" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-			</li>
-			<li class="paginate_button page-item next disabled" id="dataTableBuilder_next">
-				<a href="#" aria-controls="dataTableBuilder" data-dt-idx="2" tabindex="0" class="page-link">Next</a>
-			</li>
-		</ul>
-	</div>
+            </tr> --}}
+        </tbody>
+    </table>
+    <div class="dataTables_info" id="dataTableBuilder_info" role="status" aria-live="polite">Showing 1 to 10 of 10
+        entries</div>
+    <div class="dataTables_paginate paging_simple_numbers" id="dataTableBuilder_paginate">
+        <ul class="pagination">
+            <li class="paginate_button page-item previous disabled" id="dataTableBuilder_previous">
+                <a href="#" aria-controls="dataTableBuilder" data-dt-idx="0" tabindex="0"
+                    class="page-link">Previous</a>
+            </li>
+            <li class="paginate_button page-item active">
+                <a href="#" aria-controls="dataTableBuilder" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+            </li>
+            <li class="paginate_button page-item next disabled" id="dataTableBuilder_next">
+                <a href="#" aria-controls="dataTableBuilder" data-dt-idx="2" tabindex="0"
+                    class="page-link">Next</a>
+            </li>
+        </ul>
+    </div>
 </div>
