@@ -1,0 +1,8 @@
+.git-rewrite
+*.lock
+*.phar
+*.log
+node_modules
+package-lock.json
+
+
