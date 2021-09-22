@@ -1,0 +1,25 @@
+{
+    "name": "laraxot/theme_adminflu",
+    "description": "",
+    "authors": [{
+        "name": "Marco Xot",
+        "email": "marco.sottana@gmail.com",
+        "homepage": "https://geekpiu.com",
+        "role": "Developer"
+    }],
+    "extra": {
+        "laravel": {
+            "providers": [
+
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Themes\\AdminFlu\\": ""
+        }
+    }
+}
