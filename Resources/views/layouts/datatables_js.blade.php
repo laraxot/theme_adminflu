@@ -7,10 +7,10 @@
 <script type="text/javascript" src="{{asset('plugins/datatables/buttons/dataTables.buttons.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('plugins/datatables/buttons.js') }}"></script>
 <script type="text/javascript" src="{{asset('plugins/datatables/buttons/buttons.colVis.min.js')}}"></script>
-<script type="text/javascript" src="{{ asset('plugins/datatables/buttons.server-side.js') }}"></script>
-<script type="text/javascript" src="{{ asset('https://cdn.datatables.net/colreorder/1.5.0/js/dataTables.colReorder.js') }}"></script>
-<script type="text/javascript" src="{{ asset('https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.js') }}"></script>
-<script type="text/javascript" src="{{ asset('https://cdn.datatables.net/rowgroup/1.0.3/js/dataTables.rowGroup.js') }}"></script>
+<script type="text/javascript" src="{{ Theme::asset('plugins/datatables/buttons.server-side.js') }}"></script>
+<script type="text/javascript" src="{{ Theme::asset('https://cdn.datatables.net/colreorder/1.5.0/js/dataTables.colReorder.js') }}"></script>
+<script type="text/javascript" src="{{ Theme::asset('https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.js') }}"></script>
+<script type="text/javascript" src="{{ Theme::asset('https://cdn.datatables.net/rowgroup/1.0.3/js/dataTables.rowGroup.js') }}"></script>
 
 
 {{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>--}}
@@ -26,7 +26,7 @@
 {{--<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>--}}
 {{--<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/responsive.bootstrap4.min.js"></script>--}}
 {{--<script type="text/javascript" src="https://cdn.datatables.net/select/1.2.6/js/dataTables.select.min.js"></script>--}}
-{{--<script type="text/javascript" src="{{ asset('plugins/datatables/buttons.server-side.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ Theme::asset('plugins/datatables/buttons.server-side.js') }}"></script>--}}
 
 <script type="text/javascript">
     function initICheck(){
