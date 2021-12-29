@@ -14,7 +14,7 @@
                     <x-jet-label value="{{ __('Name') }}" />
 
                     <x-jet-input class="{{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name"
-                                 :value="old('name')" required autofocus autocomplete="name" />
+                                 :value="old('username')" required autofocus autocomplete="name" />
                     <x-jet-input-error for="name"></x-jet-input-error>
                 </div>
 
