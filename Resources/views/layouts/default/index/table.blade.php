@@ -103,12 +103,11 @@ $fields = $_panel->getFields(['act' => 'index']);
                     <td>
                         <div class="btn-group btn-group-sm">
                             <a data-toggle="tooltip" data-placement="bottom" title=""
-                                href="{{ $row_panel->url(['act' => 'edit']) }}" class="btn btn-link"
+                                href="{{ $row_panel->url('edit') }}" class="btn btn-link"
                                 data-original-title="Edit Restaurant">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <form method="POST" action="{{ $row_panel->url(['act' => 'destroy']) }}"
-                                accept-charset="UTF-8">
+                            <form method="POST" action="{{ $row_panel->url('destroy') }}" accept-charset="UTF-8">
                                 <input name="_method" type="hidden" value="DELETE">
                                 <input name="_token" type="hidden" value="A9tDcRcCyUhR346Nvgf8zxATCmHBP3baQXocLVKg">
                                 <button type="submit" class="btn btn-link text-danger"
