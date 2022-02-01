@@ -62,7 +62,7 @@
                     @csrf
 
                     <x-sidenav.link href="{{ route('logout') }}" onclick="event.preventDefault();                                               this.closest('form').submit();">
-                        <x-heroicon-o-logout class="w-4 text-green-400" />
+                        <x-svg icon="o-logout" class="w-4 text-green-400" />
                         <span>{{ __('Logout') }}</span>
                     </x-sidenav.link>
 

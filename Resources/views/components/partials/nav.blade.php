@@ -17,7 +17,7 @@
             <div class="flex items-center flex-grow">
 
                 <div class="p-2 text-white bg-blue-200 border rounded-l">
-                    <x-heroicon-o-search class="w-6 h-6" />
+                    <x-svg icon="o-search" class="w-6 h-6" />
                 </div>
                 <input type="search" name="" id="" class="w-full border-none rounded-r shadow-inner bg-blue-50 focus:ring-blue-200" placeholder="Search Topics">
             </div>
@@ -32,7 +32,7 @@
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                             <button class="flex items-center text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300">
                                 <img class="object-cover w-8 h-8 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                                <x-heroicon-o-chevron-down class="w-5 h-5 text-gray-400" />
+                                <x-svg icon="o-chevron-down" class="w-5 h-5 text-gray-400" />
                             </button>
                             @else
                             <span class="inline-flex rounded-md">
