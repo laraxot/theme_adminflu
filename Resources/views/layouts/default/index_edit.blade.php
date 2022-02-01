@@ -42,7 +42,7 @@ $last_container = last($containers);
         <div class="clearfix">
 
         </div>
-        @include('formx::includes.flash')
+        @include('theme::includes.flash')
         <div class="card">
             <div class="card-header">
                 <ul class="nav nav-tabs align-items-end card-header-tabs w-100">
