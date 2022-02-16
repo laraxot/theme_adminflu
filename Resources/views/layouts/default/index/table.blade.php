@@ -93,7 +93,7 @@ $fields = $_panel->getFields(['act' => 'index']);
 
             @foreach ($rows as $row)
                 @php
-                    $row_panel = Panel::get($row);
+                    $row_panel = Panel::make()->get($row);
                 @endphp
 
                 <tr role="row" class="odd">

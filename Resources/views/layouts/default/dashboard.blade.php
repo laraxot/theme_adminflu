@@ -20,7 +20,7 @@
 <div class="content">
 	<div class="row">
         @php
-		$panel=Panel::get(\Auth::user());
+		$panel=Panel::make()->get(\Auth::user());
 		//ddd($panel->areas());
 		//$areas=\Auth::User()->areaAdminAreas;
         $areas=$panel->areas();
