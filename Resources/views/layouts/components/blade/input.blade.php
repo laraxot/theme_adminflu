@@ -3,9 +3,9 @@
 
 @endphp
 {{--
-<div class="col-sm-{{ $field->col_bs_size }}">{{$field->col_bs_size}}
+<div class="col-sm-{{ $field->col_size }}">{{$field->col_size}}
 --}}
-<div class="form-group{{ $errors->has($name_dot) ? ' has-error is-invalid' : '' }} col-sm-{{ $field->col_bs_size }}">
+<div class="form-group{{ $errors->has($name_dot) ? ' has-error is-invalid' : '' }} col-sm-{{ $field->col_size }}">
 	{{ $label }}
 	{{ $input }}
 	{{-- --}}
