@@ -9,7 +9,7 @@ $container0 = Arr::first($containers);
 @foreach ($models as $k => $v)
     @php
         $m = new $v();
-        $panel = Panel::get($m);
+        $panel = Panel::make()->get($m);
         $url = $panel->url('index');
     @endphp
     <li class="nav-item">
