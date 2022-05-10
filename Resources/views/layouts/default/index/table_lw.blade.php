@@ -1,1 +1,1 @@
-@livewire('xot::table')
+@livewire('table')

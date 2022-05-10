@@ -11,7 +11,7 @@
     --}}
     @component('theme::components.crud',get_defined_vars())
         @slot('content')
-            @livewire('theme::edit',['model'=>$_panel->getRow()])
+            @livewire('edit',['model'=>$_panel->getRow()])
         @endslot
     @endcomponent
 @endsection

@@ -9,7 +9,7 @@ $last_container=last($containers);
     @component('adm_theme::layouts.components.list', get_defined_vars())
         @slot('content')
 
-            @livewire('theme::index')
+            @livewire('index')
 
         @endslot
     @endcomponent
