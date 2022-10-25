@@ -1,7 +1,8 @@
 <?php
 
-return [
+declare(strict_types=1);
 
+return [
     /*
      *
      * Traducciones compartidas.
@@ -17,7 +18,7 @@ return [
      *
      */
     'welcome' => [
-        'title'   => 'Bienvenido al instalador',
+        'title' => 'Bienvenido al instalador',
         'message' => 'Bienvenido al asistente de configuración',
     ],
 

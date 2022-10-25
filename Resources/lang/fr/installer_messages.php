@@ -1,7 +1,8 @@
 <?php
 
-return [
+declare(strict_types=1);
 
+return [
     /*
      *
      * Shared translations.
@@ -21,9 +22,9 @@ return [
      *
      */
     'welcome' => [
-        'title'   => 'Bienvenue dans l’installateur...',
+        'title' => 'Bienvenue dans l’installateur...',
         'message' => 'Assistant d\'installation et de configuration facile.',
-        'next'    => 'Vérifier les prérequis',
+        'next' => 'Vérifier les prérequis',
     ],
 
     /*
@@ -34,7 +35,7 @@ return [
     'requirements' => [
         'templateTitle' => 'Étape 1 | Prérequis du serveur',
         'title' => 'Prérequis du serveur',
-        'next'    => 'Vérifier les Permissions',
+        'next' => 'Vérifier les Permissions',
     ],
 
     /*
@@ -203,7 +204,7 @@ return [
          *
          */
         'welcome' => [
-            'title'   => 'Bienvenue dans l\'updateur...',
+            'title' => 'Bienvenue dans l\'updateur...',
             'message' => 'Bienvenue dans le programme de mise à jour.',
         ],
 
@@ -213,7 +214,7 @@ return [
          *
          */
         'overview' => [
-            'title'   => 'Aperçu',
+            'title' => 'Aperçu',
             'message' => 'Il y a 1 mise à jour.|Il y a :number mises à jour.',
             'install_updates' => 'Installer la mise à jour',
         ],

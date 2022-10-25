@@ -1,19 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Themes\AdminFlu\View\Components;
 
 use Illuminate\View\Component;
 
-class BaseLayout extends Component
-{
+class BaseLayout extends Component {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
+    public function __construct() {
     }
 
     /**
@@ -21,8 +20,7 @@ class BaseLayout extends Component
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render()
-    {
+    public function render() {
         return view('layouts.base');
     }
 }

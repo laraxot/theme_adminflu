@@ -20,7 +20,7 @@
     	<div class="alert alert-danger">{{ $message }}</div>
 	@enderror
 	--}}
-	{{--  
+	{{--
 	<small class="form-text text-muted">{{ trans($view.'.field.'.$name.'_help') }} </small>
 	<small id="passwordHelpBlock" class="form-text text-muted">
 		{{ trans($view.'.field.'.$name.'_help') }}

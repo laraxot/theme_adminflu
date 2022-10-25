@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'agree' => 'I agree to the terms',
     'already_member' => 'I already have a membership',

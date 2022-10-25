@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+declare(strict_types=1);
 
 return [
     'agree' => 'Eu concordo com os termos',

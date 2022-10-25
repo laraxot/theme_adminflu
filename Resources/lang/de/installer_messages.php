@@ -1,7 +1,8 @@
 <?php
 
-return [
+declare(strict_types=1);
 
+return [
     /*
      *
      * Shared translations.
@@ -17,7 +18,7 @@ return [
      *
      */
     'welcome' => [
-        'title'   => 'Willkommen zum Installer',
+        'title' => 'Willkommen zum Installer',
         'message' => 'Willkommen zum Laravel Installationsassistent.',
     ],
 
