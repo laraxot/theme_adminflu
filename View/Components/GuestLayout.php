@@ -11,6 +11,14 @@ class GuestLayout extends Component {
      * Get the view / contents that represents the component.
      */
     public function render(): \Illuminate\Contracts\Support\Renderable {
-        return view('layouts.guest');
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'layouts.guest';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
     }
 }
