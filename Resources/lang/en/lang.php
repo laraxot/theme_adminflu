@@ -5,7 +5,7 @@ declare(strict_types=1);
  * File name: lang.php
  * Last modified: 2020.05.03 at 13:55:03
  * Author: SmarterVision - https://codecanyon.net/user/smartervision
- * Copyright (c) 2020
+ * Copyright (c) 2020.
  */
 
 return [
