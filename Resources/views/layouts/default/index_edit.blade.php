@@ -42,7 +42,7 @@ $last_container = last($containers);
         <div class="clearfix">
 
         </div>
-        @include('theme::includes.flash')
+        <x-flash-message />
         <div class="card">
             <div class="card-header">
                 <ul class="nav nav-tabs align-items-end card-header-tabs w-100">
