@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Themes\AdminFlu\View\Composers;
 
 use Illuminate\View\View;
-use Modules\Theme\View\Composers\XotBaseComposer;
+use Modules\UI\View\Composers\XotBaseComposer;
 
 /**
  * Undocumented class.
